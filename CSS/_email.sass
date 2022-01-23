@@ -1,0 +1,59 @@
+$size: 30px
+#Email
+  position: relative
+  @include Parallax("../Images/EmailBG.jpg",400px,"center","right")
+  @include TextDiv("right")
+  h2
+    font-size: $size
+  form
+    width: 50%
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    padding: 10px
+    input
+      border: 0
+      background: transparent
+      border-bottom: 2px solid white
+      width: 33%
+      transition: width 1s ease-in-out
+      &:hover
+        width: 70%
+        transition: width 1s ease-out
+    button
+      border: 0
+      background-color: lightgray
+      border-radius: 15px 0 15px 0
+      height: 40px
+
+#EmailExtension
+  overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 1
+  img
+    margin: 10px
+    &:first-of-type
+      animation-name: SlideLeft
+      animation-duration: 1s
+    &:last-of-type
+      animation-name: SlideRight
+      animation-duration: 1s
+  .Right
+    animation-name: SlideRight
+    animation-duration: 1s
+  .Top
+    animation-name: SlideTop
+    animation-duration: 1s
+    animation-delay: .5s
+    animation-fill-mode: backwards
+  .Bottom
+    animation-name: SlideBottom
+    animation-duration: 1s
+    animation-delay: .5s
+    animation-fill-mode: backwards
+  .Middle
+    animation-name: PopUp
+    animation-duration: 1.5s

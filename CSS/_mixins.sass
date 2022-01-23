@@ -1,0 +1,41 @@
+@mixin Parallax($img, $height, $pos, $dir)
+  height: $height
+  @if $dir == "right"
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.8)), url($img)
+  @else
+    background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.8)), url($img)
+  background-size: cover
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-position: $pos
+
+@mixin TextDiv($dir)
+  color: white
+  h1
+    font-family: $headerFont
+    margin-top: 0
+    padding: 0
+    font-size: $fontSizeIntroh1
+  h2
+    font-family: $headerFont
+    margin-top: 0
+    padding: 0
+    font-size: $fontSizeIntroh2
+  .IntroText
+    color: white
+    animation-duration: 1s
+    animation-name: SlideRight
+    position: absolute
+    .ImgContainer
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+    img
+      transform: rotate(90deg)
+    @if $dir == "right"
+      right: 80px
+      bottom: 100px
+    @else
+      left: 80px
+      bottom: 100px

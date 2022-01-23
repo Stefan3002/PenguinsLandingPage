@@ -1,0 +1,22 @@
+#Gallery
+  position: relative
+  @include Parallax("../Images/GalleryBG.jpg",1000px,"right top","left")
+  @include TextDiv("left")
+
+#GalleryExtension
+  background: #2f2a2a
+  img
+    margin: 10px auto
+    border-radius: 0 15px 0 15px
+    &:nth-of-type(odd)
+      animation-name: SlideLeft
+      animation-duration: 1.5s
+    &:nth-of-type(even)
+      animation-name: SlideRight
+      animation-duration: 1s
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr
+  grid-gap: 10px
+  justify-content: center
+  align-items: center

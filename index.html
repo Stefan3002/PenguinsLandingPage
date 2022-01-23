@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LandingPage</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<main>
+    <div id="Scroll">
+        <div id="ScrollBar">
+
+        </div>
+    </div>
+    <header id="Intro">
+        <nav>
+            <ul>
+                <div class="FlexItem">
+                    <a href="#Intro"><li>Home</li></a>
+                </div>
+                <div class="FlexItem">
+                    <a href="#About"><li>About</li></a>
+                </div>
+                <div class="FlexItem">
+                    <a href="#Email"><li>Contact</li></a>
+                </div>
+                <div class="FlexItem">
+                    <a href="#Gallery"><li>Gallery</li></a>
+                </div>
+            </ul>
+        </nav>
+        <div class="IntroText">
+            <h1>Penguins</h1>
+            <h2>And everything you<br>need to know about them!</h2>
+            <div class="ImgContainer">
+                <a href="#Gallery"><img src="Images/Icons/64x64.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <article id="Gallery">
+        <div class="IntroText">
+            <h1>Gallery</h1>
+            <h2>With a lot of<br>cute images!</h2>
+            <div class="ImgContainer">
+                <img onclick="OpenGallery()" src="Images/Icons/64x64.png" alt="">
+            </div>
+        </div>
+    </article>
+<section id="GalleryExtensionContainer">
+
+</section>
+    <article id="Email">
+        <div class="IntroText">
+            <h2>Want pictures of<br>cute penguins<br>straight to your inbox?</h2>
+            <h2>We saved a spot just for you!</h2>
+            <div onclick="OpenSocialMedia()" class="ImgContainer">
+                <img src="Images/Icons/64x64.png" alt="">
+            </div>
+        </div>
+        <form>
+            <!--            <label>Send:-->
+            <button>Send</button>
+            <!--            </label>-->
+<!--            <label>E-mail:-->
+                <input type="email">
+<!--            </label>-->
+
+        </form>
+    </article>
+    <section id="EmailExtensionContainer">
+
+    </section>
+    <article id="About">
+        <div class="IntroText">
+            <h1>About<br>penguins!?</h1>
+            <h2>Spoiler alert:<br>They are CUTE</h2>
+            <div onclick="OpenAbout()" class="ImgContainer">
+                <img src="Images/Icons/64x64.png" alt="">
+            </div>
+        </div>
+    </article>
+    <section id="AboutExtensionContainer">
+
+    </section>
+
+<footer>
+    <img src="Images/Icons/Facebook.png" alt="Social Media Icon">
+    <img class="Bottom" src="Images/Icons/Instagram.png" alt="Social Media Icon">
+    <img class="Middle" src="Images/Icons/LinkedIn.png" alt="Social Media Icon">
+    <img class="Top" src="Images/Icons/Twitter.png" alt="Social Media Icon">
+    <img class="Right" src="Images/Icons/Mail.png" alt="Social Media Icon">
+    <p>Imagine de <a href="https://pixabay.com/ro/users/plehens-4965736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4285650">Leo furiolo</a> de la <a href="https://pixabay.com/ro/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4285650">Pixabay</a></p>
+    <p>Imagine de <a href="https://pixabay.com/ro/users/couleur-1195798/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3158998">Couleur</a> de la <a href="https://pixabay.com/ro/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3158998">Pixabay</a></p>
+    <p>Imagine de <a href="https://pixabay.com/ro/users/wildfaces-932734/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1385647">Andrea Bohl</a> de la <a href="https://pixabay.com/ro/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1385647">Pixabay</a></p>
+    <p>Imagine de <a href="https://pixabay.com/ro/users/bdougherty-4513390/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2821897">Barbara Dougherty</a> de la <a href="https://pixabay.com/ro/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2821897">Pixabay</a></p>
+    <p>Imagine de <a href="https://pixabay.com/ro/users/konradjanik-16529097/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5404178">Konrad Janik</a> de la <a href="https://pixabay.com/ro/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5404178">Pixabay</a></p>
+<!--    <p>Imagine de <a href="https://pixabay.com/ro/users/papafox-7788876/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3277930">Peter Fischer</a> de la <a href="https://pixabay.com/ro/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3277930">Pixabay</a></p>-->
+</footer>
+</main>
+
+</body>
+</html>
