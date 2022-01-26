@@ -382,6 +382,11 @@ template {
     transform: scale(0.3); }
   to {
     transform: scale(1); } }
+@keyframes FadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 #Gallery {
   position: relative;
   height: 1000px;
@@ -416,7 +421,12 @@ template {
     #Gallery .IntroText img {
       transform: rotate(90deg); }
 
+#GalleryExtensionContainer {
+  overflow: hidden; }
+
 #GalleryExtension {
+  animation-name: FadeIn;
+  animation-duration: 1.5s;
   background: #2f2a2a;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -429,10 +439,14 @@ template {
     border-radius: 0 15px 0 15px; }
     #GalleryExtension img:nth-of-type(odd) {
       animation-name: SlideLeft;
-      animation-duration: 1.5s; }
+      animation-duration: 1.5s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards; }
     #GalleryExtension img:nth-of-type(even) {
       animation-name: SlideRight;
-      animation-duration: 1s; }
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards; }
 
 #Email {
   position: relative;
@@ -605,6 +619,55 @@ footer {
   align-items: center; }
   footer img {
     margin: 10px; }
+
+#Jokes {
+  position: relative;
+  height: 900px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../Images/JokesBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: "left";
+  color: white; }
+  #Jokes h1 {
+    font-family: "Sedgwick Ave", cursive;
+    margin-top: 0;
+    padding: 0;
+    font-size: 70px; }
+  #Jokes h2 {
+    font-family: "Sedgwick Ave", cursive;
+    margin-top: 0;
+    padding: 0;
+    font-size: 50px; }
+  #Jokes .IntroText {
+    color: white;
+    animation-duration: 1s;
+    animation-name: SlideRight;
+    position: absolute;
+    right: 80px;
+    bottom: 100px; }
+    #Jokes .IntroText .ImgContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+    #Jokes .IntroText img {
+      transform: rotate(90deg); }
+
+#JokeExtensionContainer {
+  overflow: hidden; }
+
+#JokeExtension {
+  animation-name: SlideLeft;
+  animation-duration: 1s;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background: #2f2a2a;
+  height: 300px; }
 
 html {
   scroll-behavior: smooth;

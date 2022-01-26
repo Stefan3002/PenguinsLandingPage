@@ -1,0 +1,19 @@
+$size: 2rem
+
+#Jokes
+  position: relative
+  @include Parallax("../Images/JokesBG.jpg",900px,"left","right")
+  @include TextDiv("right")
+#JokeExtensionContainer
+  overflow: hidden
+#JokeExtension
+  animation-name: SlideLeft
+  animation-duration: 1s
+  color: white
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: $size
+  background: #2f2a2a
+  height: 300px

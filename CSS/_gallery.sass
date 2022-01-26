@@ -3,7 +3,11 @@
   @include Parallax("../Images/GalleryBG.jpg",1000px,"right top","left")
   @include TextDiv("left")
 
+#GalleryExtensionContainer
+  overflow: hidden
 #GalleryExtension
+  animation-name: FadeIn
+  animation-duration: 1.5s
   background: #2f2a2a
   img
     margin: 10px auto
@@ -11,9 +15,13 @@
     &:nth-of-type(odd)
       animation-name: SlideLeft
       animation-duration: 1.5s
+      animation-delay: 1s
+      animation-fill-mode: backwards
     &:nth-of-type(even)
       animation-name: SlideRight
       animation-duration: 1s
+      animation-delay: 1s
+      animation-fill-mode: backwards
   display: grid
   grid-template-columns: 1fr 1fr
   grid-template-rows: 1fr 1fr

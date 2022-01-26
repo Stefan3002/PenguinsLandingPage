@@ -11,6 +11,7 @@ function OpenGallery(){
         NewObj.innerHTML = content
         const location = document.querySelector("#GalleryExtensionContainer")
         location.appendChild(NewObj)
+        NewObj.scrollIntoView()
     }
 }
 
@@ -29,6 +30,7 @@ function OpenSocialMedia(){
         NewObj.innerHTML = content
         const location = document.querySelector("#EmailExtensionContainer")
         location.appendChild(NewObj)
+        NewObj.scrollIntoView()
     }
 }
 
@@ -108,5 +110,32 @@ function OpenAbout(){
         NewObj.innerHTML = content
         const location = document.querySelector("#AboutExtensionContainer")
         location.appendChild(NewObj)
+        NewObj.scrollIntoView()
     }
+}
+
+function GenerateJoke(){
+    const content = `
+        <div id="JokeContainer">
+
+        </div>`
+    const jokes = [
+        "Where do penguins keep their money?<br>In a snow bank, of course!",
+            "What do you call a happy penguin?<br>A pen-grin!",
+            "So why don’t penguins like rock music?<br>They only like sole.",
+        "What do penguins like to wear on the beach?<br>A beak-ini.",
+        "How do you get in touch with a penguin?<br>Give him a wing.",
+        "How does a group of penguins make a difficult decision?<br>Flipper coin."
+    ]
+    const newObj = document.createElement("article")
+    newObj.id = "JokeExtension"
+    newObj.innerHTML = content
+    let index = Math.round(Math.random() * (jokes.length - 1))
+    if(!(document.querySelector("#JokeExtension"))){
+        const JokeExtensionContainer = document.querySelector("#JokeExtensionContainer")
+        JokeExtensionContainer.appendChild(newObj)
+        newObj.scrollIntoView()
+}
+    const jokeContainer = document.querySelector("#JokeContainer")
+    jokeContainer.innerHTML = jokes[index]
 }
